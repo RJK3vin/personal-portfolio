@@ -1,11 +1,28 @@
-import './App.css'
+import { Routes, Route} from 'react-router-dom'
+import Home from './pages/Home'
+import About from './pages/About'
+import Projects from './pages/Projects'
+import Services from './pages/Services'
+import Contact from './pages/Contact'
+import NavBar from './components/NavBar'
+import Footer from './components/Footer'
 
 function App() {
 
   return (
     <>
-      <div className="h-screen flex items-center justify-center bg-gradient-to-br from-blue-500 to-purple-600 text-white text-4xl font-bold">
-        Kevin's Portfolio 🚀
+      <div className = "flex flex-col min-h-screen bg-black text-white">
+        <NavBar />
+        <div className = "flex-1">
+          <Routes>
+            <Route path="/" element = {<Home />}/>
+            <Route path="/about" element = {<About />}/>
+            <Route path="/projects" element = {<Projects />}/>
+            <Route path="/services" element = {<Services />}/>
+            <Route path="/contact" element = {<Contact />}/>
+          </Routes>
+        </div>
+        <Footer />
       </div>
     </>
   )
