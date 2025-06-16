@@ -13,7 +13,7 @@ export default function NavBar() {
 
     return (
         <nav className = "bg-black text-white px-6 py-4 shadow-lg flex justify-between items-center">
-            <h1 className = "text-xl font-bold tracking-wide">Kevin.dev</h1>
+            <h1 className = "text-2xl font-bold tracking-wide">Kevin.dev</h1>
             <div className = "space-x-6">
                 {navItems.map(item => (
                     <Link 
