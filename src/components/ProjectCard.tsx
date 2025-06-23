@@ -1,22 +1,28 @@
-interface ProjectCardProps {
-    title: string
-    description : string
-    link: string
+
+import React from "react";
+import type { Project } from "../data/projects";
+
+interface Props {
+  project: Project;
 }
 
-export default function ProjectCard({ title, description, link}: ProjectCardProps) {
-    return (
-        <div className = "bg-gray-800 p-6 rounded-xl shadow-md mb-6">
-            <h2 className = "text-2xl font-semibold text-white mb-2">{title}</h2>
-            <p className = "text-gray-300 mb-4">{description}</p>
-            <a
-                href={link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className = "inlinde-block bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition"
-            >
-                View Project →
-            </a>
-        </div>
-    )
-}
+const ProjectCard: React.FC<Props> = ({ project }) => {
+  return (
+    <div className="bg-white border border-gray-200 p-6 rounded-lg shadow hover:shadow-lg transition-all">
+      <h2 className="text-xl font-semibold text-gray-900 mb-2">{project.title}</h2>
+      <p className="text-gray-600 mb-4">{project.description}</p>
+      <a
+        href={project.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+      >
+        View Project
+      </a>
+    </div>
+  );
+};
+
+
+export default ProjectCard;
+

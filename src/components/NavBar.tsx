@@ -12,14 +12,14 @@ export default function NavBar() {
     const location = useLocation()
 
     return (
-        <nav className = "bg-black text-white px-6 py-4 shadow-lg flex justify-between items-center">
-            <h1 className = "text-2xl font-bold tracking-wide">Kevin.dev</h1>
+        <nav className = "bg-white shadow-md px-6 py-4 flex justify-between items-center stick top-0 z-50">
+            <h1 className = "text-xl font-bold text-blue-600">KR Web Studio</h1>
             <div className = "space-x-6">
                 {navItems.map(item => (
                     <Link 
                         key = {item.path}
                         to = {item.path}
-                        className = {`hover:text-blue-400 transition ${location.pathname === item.path ? 'text-blue-400 underline' : ''}`}
+                        className = {`text-gray-800 hover:text-blue-600 transition font medium ${location.pathname === item.path ? 'text-blue-600 underline' : ''}`}
                     >
                         {item.label}
                     </Link>

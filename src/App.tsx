@@ -11,7 +11,7 @@ function App() {
 
   return (
     <>
-      <div className = "flex flex-col min-h-screen bg-black text-white">
+      <div className = "flex flex-col min-h-screen">
         <NavBar />
         <div className = "flex-1">
           <Routes>
