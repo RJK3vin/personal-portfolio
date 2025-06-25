@@ -15,8 +15,8 @@ export const projects: Project[] = [
     {
         id: 2,
         title: "Wellness Detailing",
-        description: "A custom-built website for a local car wash business, including service listings, a quote form, embedded map, and customer testimonials to attract new clients",
-        link: "placeholderlink"
+        description: "A custom-built, mobile-responsive website for a local car wash business, featuring service listings, a real-time quote form, customer testimonials, and an image gallery. The site was optimized for SEO and performance, designed to convert visitors into customers through clean UI, clear call-to-actions, and tailored branding.",
+        link: "https://car-wash-frontend-alpha.vercel.app/"
     },
     {
         id: 3,
