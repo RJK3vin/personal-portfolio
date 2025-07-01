@@ -1,4 +1,5 @@
 import { Link, useLocation } from 'react-router-dom'
+import logo from '../assets/freelance_logo.png'
 
 const navItems = [
     { label: 'Home', path: '/'},
@@ -14,7 +15,9 @@ export default function NavBar() {
 
     return (
         <nav className = "bg-white shadow-md px-6 py-4 flex justify-between items-center stick top-0 z-50">
-            <h1 className = "text-xl font-bold text-blue-600">KR Web Studio</h1>
+            <Link to="/" className='flex items-center space-x-2 h-[60px] overflow-hidden'>
+                <img src={logo} alt="KR Web Studio Logo" className='h-[170px] w-auto object-contain'/>
+            </Link>
             <div className = "space-x-6">
                 {navItems.map(item => (
                     <Link 
